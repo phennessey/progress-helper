@@ -81,10 +81,10 @@ Script Editor shows the full dictionary under File > Open Dictionary > ProgressH
 
 | Command | What it does |
 |---|---|
-| `progress bar start` | Prepares a window. It appears with the first update. |
-| `progress bar update` | Every parameter is optional: `total steps`, `completed steps`, `description` (the main line), `status` (the grey line), `icon` (a file whose icon to show). `total steps 0` shows the animated waiting bar. |
-| `progress bar cancel` | If you clicked stop, closes the window and raises error -128. Call it once per loop. |
-| `progress bar end` | Closes the window. With a message, `progress bar end "Done"` shows it with a full bar for a moment first. |
+| <code>progress&nbsp;bar&nbsp;start</code> | Prepares a window. It appears with the first update. |
+| <code>progress&nbsp;bar&nbsp;update</code> | Every parameter is optional: `total steps`, `completed steps`, `description` (the main line), `status` (the grey line), `icon` (a file whose icon to show). `total steps 0` shows the animated waiting bar. |
+| <code>progress&nbsp;bar&nbsp;cancel</code> | If you clicked stop, closes the window and raises error -128. Call it once per loop. |
+| <code>progress&nbsp;bar&nbsp;end</code> | Closes the window. With a message, `progress bar end "Done"` shows it with a full bar for a moment first. |
 
 Wrap your loop in `try … on error number -128` to stop quietly when you click stop.
 

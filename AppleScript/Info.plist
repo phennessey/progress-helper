@@ -7,7 +7,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>io.github.phennessey.ProgressHelperLib</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>OSAScriptingDefinition</key>
 	<string>ProgressHelperLib</string>
 </dict>

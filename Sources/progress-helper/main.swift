@@ -248,6 +248,9 @@ final class ProgressWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.titlebarAppearsTransparent = true
         window.titlebarSeparatorStyle = .none
         window.isReleasedWhenClosed = false
+        // Float above other apps' windows so the progress window never gets buried.
+        // It only moves when the user drags it.
+        window.level = .floating
         window.standardWindowButton(.zoomButton)?.isEnabled = false
         window.delegate = self
         let content = window.contentView!

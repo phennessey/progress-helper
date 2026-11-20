@@ -10,10 +10,10 @@ Wish no more: Progress Helper is designed to give you native progress bar suppor
 
 Your script gets the same window Finder shows when it compresses a file: the file's icon, a progress bar with a stop button, and a status line underneath. You drive it from a shell script, AppleScript, Python or a Shortcut. Three commands open it, update it and close it.
 
-- **Looks like it came with your Mac.** It's built from the same window controls Finder uses, and it follows light and dark mode.
-- **Stop means stop.** Click the ✕ and your script finds out on its next check, even if it's halfway through a slow file.
-- **Run several jobs at once.** Each one gets its own window, and new windows open a step down and to the right so none hides another.
 - **One line to install.** Homebrew does the work. You don't need sudo or an Apple developer account, and it runs on any Mac with macOS 12 or later, Apple Silicon or Intel.
+- **Looks like it came with your Mac.** It's built from the same window controls Finder uses, and it follows light and dark mode.
+- **Run several jobs at once.** Each one gets its own window, and new windows open a step down and to the right so none hides another.
+- **Stop means stop.** Click the ✕ and your script finds out on its next check, even if it's halfway through a slow file.
 
 ## Install
 

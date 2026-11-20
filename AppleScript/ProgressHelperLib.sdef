@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Progress Helper">
+	<suite name="Progress Bar Suite" code="PrHl" description="Show a Finder-style progress window from any script.">
+		<command name="progress bar start" code="PrHlStRt" description="Prepare a progress window. It appears with the first update."/>
+		<command name="progress bar update" code="PrHlUpDt" description="Update the window. Every parameter is optional.">
+			<parameter name="total steps" code="PrTs" type="integer" optional="yes" description="Number of steps. 0 shows the animated waiting bar."/>
+			<parameter name="completed steps" code="PrCs" type="integer" optional="yes" description="Steps done so far."/>
+			<parameter name="description" code="PrDe" type="text" optional="yes" description="The main line, e.g. Compressing “photo.jpg”."/>
+			<parameter name="status" code="PrSt" type="text" optional="yes" description="The grey line under the bar, e.g. About a minute."/>
+			<parameter name="icon" code="PrIc" type="any" optional="yes" description="A file whose Finder icon to show: alias, file or POSIX path."/>
+		</command>
+		<command name="progress bar cancel" code="PrHlCaCl" description="If the user clicked stop, closes the window and raises error -128. Call it once per loop."/>
+		<command name="progress bar end" code="PrHlEnDo" description="Close the window. With a message, shows it with a full bar for a moment first.">
+			<direct-parameter type="text" optional="yes" description="Optional closing message."/>
+		</command>
+	</suite>
+</dictionary>

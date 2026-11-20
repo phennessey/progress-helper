@@ -2,7 +2,18 @@
 
 Native macOS progress bar for Finder Quick Actions and more.
 
-When a Quick Action runs, macOS shows a spinning gear in the menu bar and nothing else. `progress-helper` gives your script the window Finder uses when it compresses or copies files: the file's icon, a line of text, a progress bar with a stop button, and a status line underneath. Any script can drive it: shell, AppleScript, Python, or a Shortcut.
+![Progress Helper windows converting a photo, transcribing a recording and packaging an InDesign file](assets/gh_screenshot.png)
+
+Ever wished you could have native progress bar support for your Automator Quick Actions in the Finder? Tired of that disappointing spinning gear icon being the only way your user knows a script is running?
+
+Wish no more: Progress Helper is designed to give you native progress bar support for your automations on macOS!
+
+Your script gets the same window Finder shows when it compresses a file: the file's icon, a progress bar with a stop button, and a status line underneath. You drive it from a shell script, AppleScript, Python or a Shortcut. Three commands open it, update it and close it.
+
+- **Looks like it came with your Mac.** It's built from the same window controls Finder uses, and it follows light and dark mode.
+- **Stop means stop.** Click the ✕ and your script finds out on its next check, even if it's halfway through a slow file.
+- **Run several jobs at once.** Each one gets its own window, and new windows open a step down and to the right so none hides another.
+- **One line to install.** Homebrew does the work. You don't need sudo or an Apple developer account, and it runs on any Mac with macOS 12 or later, Apple Silicon or Intel.
 
 ## Install
 

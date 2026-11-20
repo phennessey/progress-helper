@@ -334,7 +334,11 @@ final class ProgressWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
             window.setFrameOrigin(NSPoint(x: (area.midX - window.frame.width / 2).rounded() + step,
                                           y: (area.midY - window.frame.height / 2).rounded() - step))
             try? "1".write(toFile: dir + "/shown", atomically: true, encoding: .utf8)
+            // Become the active app so the window draws as active (coloured buttons, blue bar),
+            // the way Finder's progress window looks. If macOS declines, it still comes to the front.
             window.orderFrontRegardless()
+            window.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
         }
     }
 
@@ -390,6 +394,7 @@ final class ProgressWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
             "label": label.stringValue, "status": status.stringValue,
             "indeterminate": bar.isIndeterminate, "value": bar.doubleValue, "max": bar.maxValue,
             "visible": window.isVisible, "hasIcon": icon.image != nil,
+            "appActive": NSApp.isActive, "isKey": window.isKeyWindow,
             "x": f.origin.x, "y": f.origin.y, "width": f.width, "height": f.height,
             "iconHidden": icon.isHidden,
             "screenIndex": NSScreen.screens.firstIndex { $0.frame.contains(NSPoint(x: f.midX, y: f.midY)) } ?? -1,
